@@ -226,6 +226,11 @@ a:focus {
     }
 }
 
+.o-row—neutral-x-light {
+    padding-top: 24px;
+    background-color: #F7F7F7;
+}
+
 /*
     Objects: Container
     ---
