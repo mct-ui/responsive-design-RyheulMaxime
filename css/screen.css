@@ -189,11 +189,18 @@ a:focus {
   #OBJECTS
 \*------------------------------------*/
 
+.o-gradient {
+    background: linear-gradient(to bottom, #3887F7 ,#5051DB);
+    color: #FFFFFF;
+}
+
 /*
     Objects: Row
     ---
     Creates a horizontal row that stretches the viewport and adds padding around children
 */
+
+
 
 .o-row {
     position: relative;
@@ -452,6 +459,24 @@ a:focus {
     color: #3E3EA8;
 }
 
+/* inverse  */
+
+.c-link-cta--inverse,
+.c-link-cta--inverse:visited,
+.c-link-cta--inverse:active {
+    color: #fff;
+}
+
+.c-link-cta--inverse::before {
+    content: "";
+    background-color: #fff;
+    
+}
+
+.c-link-cta--inverse:hover::before {
+    content: "";
+    color: #fff;
+}
 
 /*
     Component: header
@@ -473,6 +498,58 @@ a:focus {
         display: block;
     }
 }
+
+
+/*
+    Component: footer
+    ---
+    Main footer of the website
+*/
+
+.c-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.c-footer__logo {
+    flex-basis: 100%;
+}
+
+.c-footer__nav {
+    flex-basis: calc(100% / 2);
+    justify-content: space-around;
+}
+
+@media (min-width: 768px) {
+    .c-footer {
+        display: contents;
+    }
+
+    .c-footer__logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .c-footer__nav {
+        display: contents;
+    }
+}
+
+@media (min-width: 992px) {
+    .c-footer {
+    }
+
+    .c-footer__logo {
+    }
+
+    .c-footer__logo .c-logo {
+    }
+
+    .c-footer__nav {
+    }
+}
+
 
 /*
     Component: Logo
@@ -638,6 +715,7 @@ a:focus {
 .u-color-primary-dark {
     color: #3E3EA8 !important;
 }
+
 
 
 /*
