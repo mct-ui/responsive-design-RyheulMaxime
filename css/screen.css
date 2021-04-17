@@ -509,7 +509,7 @@ a:focus {
 .c-footer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    
 }
 
 .c-footer__logo {
@@ -517,39 +517,75 @@ a:focus {
 }
 
 .c-footer__nav {
-    flex-basis: calc(100% / 2);
-    justify-content: space-around;
+    flex-basis: 50%;
 }
 
 @media (min-width: 768px) {
     .c-footer {
-        display: contents;
+        justify-content: center;
+        gap: 36px;
+        
     }
 
     .c-footer__logo {
-        display: flex;
-        justify-content: center;
+        flex-basis: 100%;
+        /* display: block; */
+        text-align: center;
+
     }
 
     .c-footer__nav {
-        display: contents;
+        flex-basis: auto;
+        display: block;
     }
 }
 
 @media (min-width: 992px) {
     .c-footer {
+        flex-wrap: nowrap;
+        /* justify-content: space-between; */
     }
 
     .c-footer__logo {
+        order: 1;
+        text-align: center;
     }
 
     .c-footer__logo .c-logo {
+
     }
 
     .c-footer__nav {
+        text-align: start;
+    }
+
+    .c-footer__nav2 {
+        order: 2;
+        text-align: end;
     }
 }
 
+/*
+    Component: Title icon
+    ---
+    Special type of title with icon
+*/
+
+.c-title-icon {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.c-title-icon__icon {
+    flex-basis: 20%;
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1200px) {
+}
 
 /*
     Component: Logo
